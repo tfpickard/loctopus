@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Loctopus needs access to your location to record GPS data during sensor sessions.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Loctopus needs access to your location to record GPS data during sensor sessions, even when in the background.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Loctopus needs access to motion sensors to record accelerometer, gyroscope, and magnetometer data.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>accelerometer</string>
+		<string>gyroscope</string>
+		<string>magnetometer</string>
+	</array>
+</dict>
+</plist>
