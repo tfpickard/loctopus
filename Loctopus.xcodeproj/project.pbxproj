@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+archiveVersion = 1;
+classes = {};
+objectVersion = 56;
+objects = {
+
+/* Begin PBXBuildFile section */
+1A0A1A4E2C4C2C8400C24B80 /* LoctopusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A4D2C4C2C8400C24B80 /* LoctopusApp.swift */; };
+1A0A1A502C4C2C8400C24B80 /* SensorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A4F2C4C2C8400C24B80 /* SensorType.swift */; };
+1A0A1A522C4C2C8400C24B80 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A512C4C2C8400C24B80 /* Session.swift */; };
+1A0A1A542C4C2C8400C24B80 /* SensorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A532C4C2C8400C24B80 /* SensorSamples.swift */; };
+1A0A1A562C4C2C8400C24B80 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A552C4C2C8400C24B80 /* LocationService.swift */; };
+1A0A1A582C4C2C8400C24B80 /* MotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A572C4C2C8400C24B80 /* MotionService.swift */; };
+1A0A1A5A2C4C2C8400C24B80 /* BarometerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A592C4C2C8400C24B80 /* BarometerService.swift */; };
+1A0A1A5C2C4C2C8400C24B80 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A5B2C4C2C8400C24B80 /* SessionStore.swift */; };
+1A0A1A5E2C4C2C8400C24B80 /* CloudSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A5D2C4C2C8400C24B80 /* CloudSyncService.swift */; };
+1A0A1A602C4C2C8400C24B80 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A5F2C4C2C8400C24B80 /* ExportService.swift */; };
+1A0A1A622C4C2C8400C24B80 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A612C4C2C8400C24B80 /* AppViewModel.swift */; };
+1A0A1A642C4C2C8400C24B80 /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A632C4C2C8400C24B80 /* RecordingViewModel.swift */; };
+1A0A1A662C4C2C8400C24B80 /* SessionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A652C4C2C8400C24B80 /* SessionsViewModel.swift */; };
+1A0A1A682C4C2C8400C24B80 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A672C4C2C8400C24B80 /* SettingsViewModel.swift */; };
+1A0A1A6A2C4C2C8400C24B80 /* InstrumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A692C4C2C8400C24B80 /* InstrumentViewModel.swift */; };
+1A0A1A6C2C4C2C8400C24B80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A6B2C4C2C8400C24B80 /* ContentView.swift */; };
+1A0A1A6E2C4C2C8400C24B80 /* InstrumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A6D2C4C2C8400C24B80 /* InstrumentsView.swift */; };
+1A0A1A702C4C2C8400C24B80 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A6F2C4C2C8400C24B80 /* RecordingView.swift */; };
+1A0A1A722C4C2C8400C24B80 /* SessionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A712C4C2C8400C24B80 /* SessionsListView.swift */; };
+1A0A1A742C4C2C8400C24B80 /* SessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A732C4C2C8400C24B80 /* SessionDetailView.swift */; };
+1A0A1A762C4C2C8400C24B80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A752C4C2C8400C24B80 /* SettingsView.swift */; };
+1A0A1A782C4C2C8400C24B80 /* SensorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A772C4C2C8400C24B80 /* SensorCardView.swift */; };
+1A0A1A7A2C4C2C8400C24B80 /* SensorBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A792C4C2C8400C24B80 /* SensorBadgeView.swift */; };
+1A0A1A7C2C4C2C8400C24B80 /* StatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A1A7B2C4C2C8400C24B80 /* StatRow.swift */; };
+1A0A1A7F2C4C2C8400C24B80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0A1A7E2C4C2C8400C24B80 /* Assets.xcassets */; };
+1A0A1A822C4C2C8400C24B80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0A1A812C4C2C8400C24B80 /* Preview Assets.xcassets */; };
+1A0A1A842C4C2C8400C24B80 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A0A1A832C4C2C8400C24B80 /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+1A0A1A4D2C4C2C8400C24B80 /* LoctopusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoctopusApp.swift; sourceTree = "<group>"; };
+1A0A1A4F2C4C2C8400C24B80 /* SensorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorType.swift; sourceTree = "<group>"; };
+1A0A1A512C4C2C8400C24B80 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+1A0A1A532C4C2C8400C24B80 /* SensorSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorSamples.swift; sourceTree = "<group>"; };
+1A0A1A552C4C2C8400C24B80 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+1A0A1A572C4C2C8400C24B80 /* MotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionService.swift; sourceTree = "<group>"; };
+1A0A1A592C4C2C8400C24B80 /* BarometerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerService.swift; sourceTree = "<group>"; };
+1A0A1A5B2C4C2C8400C24B80 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+1A0A1A5D2C4C2C8400C24B80 /* CloudSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSyncService.swift; sourceTree = "<group>"; };
+1A0A1A5F2C4C2C8400C24B80 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+1A0A1A612C4C2C8400C24B80 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+1A0A1A632C4C2C8400C24B80 /* RecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewModel.swift; sourceTree = "<group>"; };
+1A0A1A652C4C2C8400C24B80 /* SessionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsViewModel.swift; sourceTree = "<group>"; };
+1A0A1A672C4C2C8400C24B80 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+1A0A1A692C4C2C8400C24B80 /* InstrumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentViewModel.swift; sourceTree = "<group>"; };
+1A0A1A6B2C4C2C8400C24B80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+1A0A1A6D2C4C2C8400C24B80 /* InstrumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsView.swift; sourceTree = "<group>"; };
+1A0A1A6F2C4C2C8400C24B80 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+1A0A1A712C4C2C8400C24B80 /* SessionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListView.swift; sourceTree = "<group>"; };
+1A0A1A732C4C2C8400C24B80 /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
+1A0A1A752C4C2C8400C24B80 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+1A0A1A772C4C2C8400C24B80 /* SensorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCardView.swift; sourceTree = "<group>"; };
+1A0A1A792C4C2C8400C24B80 /* SensorBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorBadgeView.swift; sourceTree = "<group>"; };
+1A0A1A7B2C4C2C8400C24B80 /* StatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRow.swift; sourceTree = "<group>"; };
+1A0A1A7E2C4C2C8400C24B80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+1A0A1A812C4C2C8400C24B80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+1A0A1A832C4C2C8400C24B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+1A0A1A852C4C2C8400C24B80 /* Loctopus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loctopus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+1A0A1A872C4C2C8400C24B80 /* Loctopus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Loctopus.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+1A0A1A462C4C2C8400C24B80 /* Frameworks */ = {
+isa = PBXFrameworksBuildPhase;
+buildActionMask = 2147483647;
+files = (
+);
+runOnlyForDeploymentPostprocessing = 0;
+};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+1A0A1A3E2C4C2C8400C24B80 = {
+isa = PBXGroup;
+children = (
+1A0A1A4C2C4C2C8400C24B80 /* Loctopus */,
+1A0A1A862C4C2C8400C24B80 /* Products */,
+);
+sourceTree = "<group>";
+};
+1A0A1A4C2C4C2C8400C24B80 /* Loctopus */ = {
+isa = PBXGroup;
+children = (
+1A0A1A872C4C2C8400C24B80 /* Loctopus.entitlements */,
+1A0A1A4D2C4C2C8400C24B80 /* LoctopusApp.swift */,
+1A0A1A4E2C4C2C8400C24B80 /* Models */, 
+1A0A1A542C4C2C8400C24B80 /* Services */, 
+1A0A1A602C4C2C8400C24B80 /* ViewModels */, 
+1A0A1A6C2C4C2C8400C24B80 /* Views */, 
+1A0A1A7E2C4C2C8400C24B80 /* Assets.xcassets */,
+1A0A1A832C4C2C8400C24B80 /* Info.plist */,
+1A0A1A802C4C2C8400C24B80 /* Preview Content */,
+);
+path = Loctopus;
+sourceTree = "<group>";
+};
+1A0A1A862C4C2C8400C24B80 /* Products */ = {
+isa = PBXGroup;
+children = (
+1A0A1A852C4C2C8400C24B80 /* Loctopus.app */,
+);
+name = Products;
+sourceTree = "<group>";
+};
+1A0A1A4E2C4C2C8400C24B80 /* Models */ = {
+isa = PBXGroup;
+children = (
+1A0A1A4F2C4C2C8400C24B80 /* SensorType.swift */,
+1A0A1A512C4C2C8400C24B80 /* Session.swift */,
+1A0A1A532C4C2C8400C24B80 /* SensorSamples.swift */,
+);
+path = Models;
+sourceTree = "<group>";
+};
+1A0A1A542C4C2C8400C24B80 /* Services */ = {
+isa = PBXGroup;
+children = (
+1A0A1A552C4C2C8400C24B80 /* LocationService.swift */,
+1A0A1A572C4C2C8400C24B80 /* MotionService.swift */,
+1A0A1A592C4C2C8400C24B80 /* BarometerService.swift */,
+1A0A1A5B2C4C2C8400C24B80 /* SessionStore.swift */,
+1A0A1A5D2C4C2C8400C24B80 /* CloudSyncService.swift */,
+1A0A1A5F2C4C2C8400C24B80 /* ExportService.swift */,
+);
+path = Services;
+sourceTree = "<group>";
+};
+1A0A1A602C4C2C8400C24B80 /* ViewModels */ = {
+isa = PBXGroup;
+children = (
+1A0A1A612C4C2C8400C24B80 /* AppViewModel.swift */,
+1A0A1A632C4C2C8400C24B80 /* RecordingViewModel.swift */,
+1A0A1A652C4C2C8400C24B80 /* SessionsViewModel.swift */,
+1A0A1A672C4C2C8400C24B80 /* SettingsViewModel.swift */,
+1A0A1A692C4C2C8400C24B80 /* InstrumentViewModel.swift */,
+);
+path = ViewModels;
+sourceTree = "<group>";
+};
+1A0A1A6C2C4C2C8400C24B80 /* Views */ = {
+isa = PBXGroup;
+children = (
+1A0A1A6B2C4C2C8400C24B80 /* ContentView.swift */,
+1A0A1A6D2C4C2C8400C24B80 /* InstrumentsView.swift */,
+1A0A1A6F2C4C2C8400C24B80 /* RecordingView.swift */,
+1A0A1A712C4C2C8400C24B80 /* SessionsListView.swift */,
+1A0A1A732C4C2C8400C24B80 /* SessionDetailView.swift */,
+1A0A1A752C4C2C8400C24B80 /* SettingsView.swift */,
+1A0A1A7D2C4C2C8400C24B80 /* Components */,
+);
+path = Views;
+sourceTree = "<group>";
+};
+1A0A1A7D2C4C2C8400C24B80 /* Components */ = {
+isa = PBXGroup;
+children = (
+1A0A1A772C4C2C8400C24B80 /* SensorCardView.swift */,
+1A0A1A792C4C2C8400C24B80 /* SensorBadgeView.swift */,
+1A0A1A7B2C4C2C8400C24B80 /* StatRow.swift */,
+);
+path = Components;
+sourceTree = "<group>";
+};
+1A0A1A802C4C2C8400C24B80 /* Preview Content */ = {
+isa = PBXGroup;
+children = (
+1A0A1A812C4C2C8400C24B80 /* Preview Assets.xcassets */,
+);
+path = "Preview Content";
+sourceTree = "<group>";
+};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+1A0A1A852C4C2C8400C24B80 /* Loctopus */ = {
+isa = PBXNativeTarget;
+buildConfigurationList = 1A0A1A8E2C4C2C8400C24B80 /* Build configuration list for PBXNativeTarget "Loctopus" */;
+buildPhases = (
+1A0A1A452C4C2C8400C24B80 /* Sources */,
+1A0A1A462C4C2C8400C24B80 /* Frameworks */,
+1A0A1A472C4C2C8400C24B80 /* Resources */,
+);
+buildRules = (
+);
+dependencies = (
+);
+name = Loctopus;
+productName = Loctopus;
+productReference = 1A0A1A852C4C2C8400C24B80 /* Loctopus.app */;
+productType = "com.apple.product-type.application";
+};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+1A0A1A3F2C4C2C8400C24B80 /* Project object */ = {
+isa = PBXProject;
+attributes = {
+BuildIndependentTargetsInParallel = YES;
+LastSwiftUpdateCheck = 1500;
+LastUpgradeCheck = 1500;
+TargetAttributes = {
+1A0A1A852C4C2C8400C24B80 = {
+DevelopmentTeam = "";
+ProvisioningStyle = Automatic;
+};
+};
+};
+buildConfigurationList = 1A0A1A422C4C2C8400C24B80 /* Build configuration list for PBXProject "Loctopus" */;
+compatibilityVersion = "Xcode 14.0";
+developmentRegion = en;
+hasScannedForEncodings = 0;
+knownRegions = (
+en,
+Base,
+);
+mainGroup = 1A0A1A3E2C4C2C8400C24B80;
+productRefGroup = 1A0A1A862C4C2C8400C24B80 /* Products */;
+projectDirPath = "";
+projectRoot = "";
+targets = (
+1A0A1A852C4C2C8400C24B80 /* Loctopus */,
+);
+};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+1A0A1A472C4C2C8400C24B80 /* Resources */ = {
+isa = PBXResourcesBuildPhase;
+buildActionMask = 2147483647;
+files = (
+1A0A1A842C4C2C8400C24B80 /* Info.plist in Resources */,
+1A0A1A822C4C2C8400C24B80 /* Preview Assets.xcassets in Resources */,
+1A0A1A7F2C4C2C8400C24B80 /* Assets.xcassets in Resources */,
+);
+runOnlyForDeploymentPostprocessing = 0;
+};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+1A0A1A452C4C2C8400C24B80 /* Sources */ = {
+isa = PBXSourcesBuildPhase;
+buildActionMask = 2147483647;
+files = (
+1A0A1A4E2C4C2C8400C24B80 /* LoctopusApp.swift in Sources */,
+1A0A1A6E2C4C2C8400C24B80 /* InstrumentsView.swift in Sources */,
+1A0A1A702C4C2C8400C24B80 /* RecordingView.swift in Sources */,
+1A0A1A6C2C4C2C8400C24B80 /* ContentView.swift in Sources */,
+1A0A1A762C4C2C8400C24B80 /* SettingsView.swift in Sources */,
+1A0A1A782C4C2C8400C24B80 /* SensorCardView.swift in Sources */,
+1A0A1A7A2C4C2C8400C24B80 /* SensorBadgeView.swift in Sources */,
+1A0A1A7C2C4C2C8400C24B80 /* StatRow.swift in Sources */,
+1A0A1A722C4C2C8400C24B80 /* SessionsListView.swift in Sources */,
+1A0A1A742C4C2C8400C24B80 /* SessionDetailView.swift in Sources */,
+1A0A1A622C4C2C8400C24B80 /* AppViewModel.swift in Sources */,
+1A0A1A642C4C2C8400C24B80 /* RecordingViewModel.swift in Sources */,
+1A0A1A662C4C2C8400C24B80 /* SessionsViewModel.swift in Sources */,
+1A0A1A682C4C2C8400C24B80 /* SettingsViewModel.swift in Sources */,
+1A0A1A6A2C4C2C8400C24B80 /* InstrumentViewModel.swift in Sources */,
+1A0A1A502C4C2C8400C24B80 /* SensorType.swift in Sources */,
+1A0A1A522C4C2C8400C24B80 /* Session.swift in Sources */,
+1A0A1A542C4C2C8400C24B80 /* SensorSamples.swift in Sources */,
+1A0A1A562C4C2C8400C24B80 /* LocationService.swift in Sources */,
+1A0A1A582C4C2C8400C24B80 /* MotionService.swift in Sources */,
+1A0A1A5A2C4C2C8400C24B80 /* BarometerService.swift in Sources */,
+1A0A1A5C2C4C2C8400C24B80 /* SessionStore.swift in Sources */,
+1A0A1A5E2C4C2C8400C24B80 /* CloudSyncService.swift in Sources */,
+1A0A1A602C4C2C8400C24B80 /* ExportService.swift in Sources */,
+);
+runOnlyForDeploymentPostprocessing = 0;
+};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+1A0A1A432C4C2C8400C24B80 /* Debug */ = {
+isa = XCBuildConfiguration;
+buildSettings = {
+ALWAYS_SEARCH_USER_PATHS = NO;
+CLANG_ANALYZER_NONNULL = YES;
+CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+CLANG_ENABLE_MODULES = YES;
+CLANG_ENABLE_OBJC_ARC = YES;
+CLANG_ENABLE_OBJC_WEAK = YES;
+CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+CODE_SIGN_ENTITLEMENTS = Loctopus/Loctopus.entitlements;
+CURRENT_PROJECT_VERSION = 1;
+DEVELOPMENT_ASSET_PATHS = "Loctopus/Preview Content";
+DEVELOPMENT_TEAM = "";
+ENABLE_PREVIEWS = YES;
+GENERATE_INFOPLIST_FILE = NO;
+INFOPLIST_FILE = Loctopus/Info.plist;
+IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+MARKETING_VERSION = 1.0;
+PRODUCT_BUNDLE_IDENTIFIER = com.example.loctopus;
+PRODUCT_NAME = "$(TARGET_NAME)";
+SDKROOT = iphoneos;
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";
+SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+SWIFT_VERSION = 5.0;
+TARGETED_DEVICE_FAMILY = "1,2";
+};
+name = Debug;
+};
+1A0A1A442C4C2C8400C24B80 /* Release */ = {
+isa = XCBuildConfiguration;
+buildSettings = {
+ALWAYS_SEARCH_USER_PATHS = NO;
+CLANG_ANALYZER_NONNULL = YES;
+CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+CLANG_ENABLE_MODULES = YES;
+CLANG_ENABLE_OBJC_ARC = YES;
+CLANG_ENABLE_OBJC_WEAK = YES;
+CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+CODE_SIGN_ENTITLEMENTS = Loctopus/Loctopus.entitlements;
+CURRENT_PROJECT_VERSION = 1;
+DEVELOPMENT_ASSET_PATHS = "Loctopus/Preview Content";
+DEVELOPMENT_TEAM = "";
+ENABLE_PREVIEWS = YES;
+GENERATE_INFOPLIST_FILE = NO;
+INFOPLIST_FILE = Loctopus/Info.plist;
+IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+MARKETING_VERSION = 1.0;
+PRODUCT_BUNDLE_IDENTIFIER = com.example.loctopus;
+PRODUCT_NAME = "$(TARGET_NAME)";
+SDKROOT = iphoneos;
+SWIFT_VERSION = 5.0;
+TARGETED_DEVICE_FAMILY = "1,2";
+};
+name = Release;
+};
+1A0A1A8F2C4C2C8400C24B80 /* Debug */ = {
+isa = XCBuildConfiguration;
+buildSettings = {
+	CODE_SIGN_STYLE = Automatic;
+	CODE_SIGN_ENTITLEMENTS = Loctopus/Loctopus.entitlements;
+	DEVELOPMENT_TEAM = "";
+	INFOPLIST_FILE = Loctopus/Info.plist;
+	LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+	PRODUCT_BUNDLE_IDENTIFIER = com.example.loctopus;
+	PRODUCT_NAME = "$(TARGET_NAME)";
+	SWIFT_VERSION = 5.0;
+	TARGETED_DEVICE_FAMILY = "1,2";
+	IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+};
+name = Debug;
+};
+1A0A1A902C4C2C8400C24B80 /* Release */ = {
+isa = XCBuildConfiguration;
+buildSettings = {
+	CODE_SIGN_STYLE = Automatic;
+	CODE_SIGN_ENTITLEMENTS = Loctopus/Loctopus.entitlements;
+	DEVELOPMENT_TEAM = "";
+	INFOPLIST_FILE = Loctopus/Info.plist;
+	LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+	PRODUCT_BUNDLE_IDENTIFIER = com.example.loctopus;
+	PRODUCT_NAME = "$(TARGET_NAME)";
+	SWIFT_VERSION = 5.0;
+	TARGETED_DEVICE_FAMILY = "1,2";
+	IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+};
+name = Release;
+};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+1A0A1A422C4C2C8400C24B80 /* Build configuration list for PBXProject "Loctopus" */ = {
+isa = XCConfigurationList;
+buildConfigurations = (
+1A0A1A432C4C2C8400C24B80 /* Debug */,
+1A0A1A442C4C2C8400C24B80 /* Release */,
+);
+defaultConfigurationIsVisible = 0;
+defaultConfigurationName = Release;
+};
+1A0A1A8E2C4C2C8400C24B80 /* Build configuration list for PBXNativeTarget "Loctopus" */ = {
+isa = XCConfigurationList;
+buildConfigurations = (
+1A0A1A8F2C4C2C8400C24B80 /* Debug */,
+1A0A1A902C4C2C8400C24B80 /* Release */,
+);
+defaultConfigurationIsVisible = 0;
+defaultConfigurationName = Release;
+};
+/* End XCConfigurationList section */
+
+};
+rootObject = 1A0A1A3F2C4C2C8400C24B80 /* Project object */;
+}

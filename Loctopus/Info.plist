@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>Loctopus</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.example.loctopus</string>
+    <key>UILaunchScreen</key>
+    <dict/>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Loctopus needs your location to record GPS tracks during sessions.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Allow background location to keep GPS recording while the screen is off.</string>
+    <key>NSMotionUsageDescription</key>
+    <string>Loctopus reads motion sensors (accelerometer, gyroscope, magnetometer) to capture session data.</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string></string>
+    <key>UIRequiresFullScreen</key>
+    <false/>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+</dict>
+</plist>
