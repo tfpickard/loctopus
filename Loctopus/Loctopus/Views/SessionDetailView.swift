@@ -189,20 +189,28 @@ struct SessionDetailView: View {
             Text("GPS Track")
                 .font(.headline)
 
-            // Map placeholder
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color(.systemGray6))
-                .frame(height: 200)
-                .overlay(
-                    VStack {
-                        Image(systemName: "map.fill")
-                            .font(.largeTitle)
+            // GPS route map
+            if !viewModel.gpsData.isEmpty {
+                let coordinates = viewModel.gpsData.map { sample in
+                    CLLocationCoordinate2D(latitude: sample.latitude, longitude: sample.longitude)
+                }
+
+                GPSMapView(coordinates: coordinates)
+                    .frame(height: 250)
+                    .cornerRadius(12)
+
+                Text("\(viewModel.gpsData.count) GPS points")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            } else {
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color(.systemGray6))
+                    .frame(height: 200)
+                    .overlay(
+                        Text("No GPS data")
                             .foregroundColor(.secondary)
-                        Text("\(viewModel.gpsData.count) GPS points")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    }
-                )
+                    )
+            }
 
             HStack {
                 if let range = viewModel.altitudeRange {

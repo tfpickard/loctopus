@@ -87,24 +87,16 @@ struct RecordingView: View {
                 .font(.title2.bold())
                 .padding()
 
-            // Simplified map placeholder
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color(.systemGray5))
+            // Live GPS map
+            LiveGPSMapView(coordinates: viewModel.recordedGPSCoordinates)
                 .frame(height: 300)
-                .overlay(
-                    VStack {
-                        Image(systemName: "map.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.secondary)
-                        Text("Map View")
-                            .foregroundColor(.secondary)
-                    }
-                )
+                .cornerRadius(16)
                 .padding()
 
             VStack(spacing: 12) {
                 MetricRow(label: "Speed", value: String(format: "%.1f m/s", viewModel.currentSpeed))
                 MetricRow(label: "Altitude", value: String(format: "%.1f m", viewModel.currentAltitude))
+                MetricRow(label: "Points", value: "\(viewModel.recordedGPSCoordinates.count)")
             }
             .padding()
 
@@ -119,17 +111,29 @@ struct RecordingView: View {
                 .padding()
 
             VStack(alignment: .leading, spacing: 8) {
-                Text("3-Axis Acceleration")
+                Text("3-Axis Acceleration (g)")
                     .font(.caption)
                     .foregroundColor(.secondary)
 
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(.systemGray6))
-                    .frame(height: 150)
-                    .overlay(
-                        Text("Live Graph")
-                            .foregroundColor(.secondary)
-                    )
+                ThreeAxisGraphView(
+                    xData: viewModel.accelXHistory,
+                    yData: viewModel.accelYHistory,
+                    zData: viewModel.accelZHistory
+                )
+                .padding(.vertical, 4)
+
+                HStack(spacing: 16) {
+                    Label("X", systemImage: "circle.fill")
+                        .foregroundColor(.red)
+                        .font(.caption)
+                    Label("Y", systemImage: "circle.fill")
+                        .foregroundColor(.green)
+                        .font(.caption)
+                    Label("Z", systemImage: "circle.fill")
+                        .foregroundColor(.blue)
+                        .font(.caption)
+                }
+                .padding(.horizontal)
             }
             .padding()
 
@@ -147,17 +151,29 @@ struct RecordingView: View {
                 .padding()
 
             VStack(alignment: .leading, spacing: 8) {
-                Text("3-Axis Rotation Rate")
+                Text("3-Axis Rotation Rate (rad/s)")
                     .font(.caption)
                     .foregroundColor(.secondary)
 
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(.systemGray6))
-                    .frame(height: 150)
-                    .overlay(
-                        Text("Live Graph")
-                            .foregroundColor(.secondary)
-                    )
+                ThreeAxisGraphView(
+                    xData: viewModel.gyroXHistory,
+                    yData: viewModel.gyroYHistory,
+                    zData: viewModel.gyroZHistory
+                )
+                .padding(.vertical, 4)
+
+                HStack(spacing: 16) {
+                    Label("X", systemImage: "circle.fill")
+                        .foregroundColor(.red)
+                        .font(.caption)
+                    Label("Y", systemImage: "circle.fill")
+                        .foregroundColor(.green)
+                        .font(.caption)
+                    Label("Z", systemImage: "circle.fill")
+                        .foregroundColor(.blue)
+                        .font(.caption)
+                }
+                .padding(.horizontal)
             }
             .padding()
 
@@ -191,17 +207,13 @@ struct RecordingView: View {
                 .padding()
 
             VStack(alignment: .leading, spacing: 8) {
-                Text("Atmospheric Pressure")
+                Text("Atmospheric Pressure (kPa)")
                     .font(.caption)
                     .foregroundColor(.secondary)
 
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(.systemGray6))
-                    .frame(height: 150)
-                    .overlay(
-                        Text("Live Graph")
-                            .foregroundColor(.secondary)
-                    )
+                LiveGraphView(data: viewModel.pressureHistory, color: .blue)
+                    .frame(height: 120)
+                    .padding(.vertical, 4)
             }
             .padding()
 

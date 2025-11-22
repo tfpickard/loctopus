@@ -31,6 +31,7 @@
 		A1000060 /* SensorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000028 /* SensorCardView.swift */; };
 		A1000061 /* LiveGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000029 /* LiveGraphView.swift */; };
 		A1000062 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002A /* CompassView.swift */; };
+		A1000063 /* GPSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002B /* GPSMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		A1000028 /* SensorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCardView.swift; sourceTree = "<group>"; };
 		A1000029 /* LiveGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGraphView.swift; sourceTree = "<group>"; };
 		A100002A /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
+		A100002B /* GPSMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSMapView.swift; sourceTree = "<group>"; };
 		A1000008 /* Loctopus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Loctopus.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				A1000028 /* SensorCardView.swift */,
 				A1000029 /* LiveGraphView.swift */,
 				A100002A /* CompassView.swift */,
+				A100002B /* GPSMapView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				A1000060 /* SensorCardView.swift in Sources */,
 				A1000061 /* LiveGraphView.swift in Sources */,
 				A1000062 /* CompassView.swift in Sources */,
+				A1000063 /* GPSMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

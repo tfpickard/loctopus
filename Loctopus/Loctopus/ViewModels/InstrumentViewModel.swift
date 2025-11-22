@@ -25,6 +25,18 @@ class InstrumentViewModel: ObservableObject {
     @Published var currentHeading: Double = 0
     @Published var currentPressure: Double = 0
 
+    // Live data history for graphs (limited to recent samples)
+    @Published var recordedGPSCoordinates: [CLLocationCoordinate2D] = []
+    @Published var accelXHistory: [Double] = []
+    @Published var accelYHistory: [Double] = []
+    @Published var accelZHistory: [Double] = []
+    @Published var gyroXHistory: [Double] = []
+    @Published var gyroYHistory: [Double] = []
+    @Published var gyroZHistory: [Double] = []
+    @Published var pressureHistory: [Double] = []
+
+    private let maxHistoryPoints = 100
+
     // Statistics for current session
     private var sessionStats = SessionStatistics()
 
@@ -63,6 +75,13 @@ class InstrumentViewModel: ObservableObject {
                     self.currentSpeed = gpsSample.speed
                     self.currentAltitude = gpsSample.altitude
 
+                    // Add to GPS coordinates
+                    let coordinate = CLLocationCoordinate2D(
+                        latitude: gpsSample.latitude,
+                        longitude: gpsSample.longitude
+                    )
+                    self.recordedGPSCoordinates.append(coordinate)
+
                     if gpsSample.speed > self.sessionStats.maxSpeed {
                         self.sessionStats.maxSpeed = gpsSample.speed
                     }
@@ -90,6 +109,19 @@ class InstrumentViewModel: ObservableObject {
                     self.sessionStats.accelerometerSampleCount += 1
 
                     self.currentAcceleration = accelSample.magnitude
+
+                    // Add to history
+                    self.accelXHistory.append(accelSample.x)
+                    self.accelYHistory.append(accelSample.y)
+                    self.accelZHistory.append(accelSample.z)
+
+                    // Limit history size
+                    if self.accelXHistory.count > self.maxHistoryPoints {
+                        self.accelXHistory.removeFirst()
+                        self.accelYHistory.removeFirst()
+                        self.accelZHistory.removeFirst()
+                    }
+
                     if accelSample.magnitude > self.sessionStats.maxAcceleration {
                         self.sessionStats.maxAcceleration = accelSample.magnitude
                     }
@@ -106,6 +138,18 @@ class InstrumentViewModel: ObservableObject {
 
                     let magnitude = sqrt(gyroSample.x * gyroSample.x + gyroSample.y * gyroSample.y + gyroSample.z * gyroSample.z)
                     self.currentRotation = magnitude
+
+                    // Add to history
+                    self.gyroXHistory.append(gyroSample.x)
+                    self.gyroYHistory.append(gyroSample.y)
+                    self.gyroZHistory.append(gyroSample.z)
+
+                    // Limit history size
+                    if self.gyroXHistory.count > self.maxHistoryPoints {
+                        self.gyroXHistory.removeFirst()
+                        self.gyroYHistory.removeFirst()
+                        self.gyroZHistory.removeFirst()
+                    }
                 }
             }
         }
@@ -132,6 +176,14 @@ class InstrumentViewModel: ObservableObject {
                     self.sessionStats.barometerSampleCount += 1
 
                     self.currentPressure = baroSample.pressure
+
+                    // Add to history
+                    self.pressureHistory.append(baroSample.pressure)
+
+                    // Limit history size
+                    if self.pressureHistory.count > self.maxHistoryPoints {
+                        self.pressureHistory.removeFirst()
+                    }
                 }
             }
         }
@@ -180,5 +232,15 @@ class InstrumentViewModel: ObservableObject {
         currentRotation = 0
         currentHeading = 0
         currentPressure = 0
+
+        // Clear history
+        recordedGPSCoordinates.removeAll()
+        accelXHistory.removeAll()
+        accelYHistory.removeAll()
+        accelZHistory.removeAll()
+        gyroXHistory.removeAll()
+        gyroYHistory.removeAll()
+        gyroZHistory.removeAll()
+        pressureHistory.removeAll()
     }
 }

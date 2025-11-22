@@ -1,5 +1,6 @@
 import Foundation
-import ZipArchive
+import System
+import UniformTypeIdentifiers
 
 class ExportManager {
     static let shared = ExportManager()
@@ -272,17 +273,41 @@ class ExportManager {
 
         guard !filesToZip.isEmpty else { return nil }
 
-        // Create ZIP
+        // Create ZIP using FileManager's built-in archiving
         let zipURL = FileManager.default.temporaryDirectory
             .appendingPathComponent("\(session.name).zip")
 
         // Remove existing zip if present
         try? FileManager.default.removeItem(at: zipURL)
 
-        // Simple ZIP creation (in production, use ZipArchive or similar)
-        // For now, we'll just return the first file
-        // TODO: Implement proper ZIP archiving
-        return filesToZip.first
+        do {
+            // Use Coordinator to create a ZIP archive
+            let coordinator = NSFileCoordinator()
+            var error: NSError?
+
+            coordinator.coordinate(readingItemAt: tempDir, options: [.forUploading], error: &error) { zipFileURL in
+                do {
+                    try FileManager.default.copyItem(at: zipFileURL, to: zipURL)
+                } catch {
+                    print("Failed to copy ZIP archive: \(error)")
+                }
+            }
+
+            if let error = error {
+                print("Failed to create ZIP: \(error)")
+                return nil
+            }
+
+            // Verify ZIP was created
+            if FileManager.default.fileExists(atPath: zipURL.path) {
+                return zipURL
+            }
+        }
+
+        // Cleanup temp directory
+        try? FileManager.default.removeItem(at: tempDir)
+
+        return nil
     }
 
     // MARK: - Helpers
